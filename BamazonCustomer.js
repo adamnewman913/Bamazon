@@ -30,14 +30,14 @@ function startPrompt() {
 
         type: "confirm",
         name: "confirm",
-        message: "Welcome to Bamazon! Would you like to view our inventory?",
+        message: "Welcome to Bamazon! Would you like to see what we have in stock?",
         default: true
 
     }]).then(function(user) {
         if (user.confirm === true) {
             inventory();
         } else {
-            console.log("Thank you! Come back soon!");
+            console.log("Thank you! We'll you soon!");
         }
     });
 }
@@ -90,14 +90,14 @@ function continuePrompt() {
 
         type: "confirm",
         name: "continue",
-        message: "Would you like to purchase an item?",
+        message: "Would you like to buy an item?",
         default: true
 
     }]).then(function(user) {
         if (user.continue === true) {
             selectionPrompt();
         } else {
-            console.log("Thank you! Come back soon!");
+            console.log("Thank you! See you soon!");
         }
     });
 }
@@ -110,7 +110,7 @@ function selectionPrompt() {
 
             type: "input",
             name: "inputId",
-            message: "Please enter the ID number of the item you would like to purchase.",
+            message: "Please enter the ID number of the item you would like to buy.",
         },
         {
             type: "input",
@@ -165,7 +165,7 @@ function confirmPrompt(newStock, purchaseId) {
 
         type: "confirm",
         name: "confirmPurchase",
-        message: "Are you sure you would like to purchase this item and quantity?",
+        message: "Are you sure you would like to purchase this item/amount??",
         default: true
 
     }]).then(function(userConfirm) {
